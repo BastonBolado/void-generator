@@ -1,6 +1,7 @@
 package club.bastonbolado.voidgenerator;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.World;
 import org.bukkit.generator.ChunkGenerator;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -32,7 +33,10 @@ public class Main extends JavaPlugin {
 
         @Override
         public Location getFixedSpawnLocation(World world, Random random) {
-            return new Location(world, 0.0D, 64.0D, 0.0D);
+            final Location spawnLocation = new Location(world, 0.0D, 64.0D, 0.0D);
+            final Location blockLocation = spawnLocation.clone().subtract(0D, 1D, 0D);
+            blockLocation.getBlock().setType(Material.BEDROCK);
+            return spawnLocation;
         }
     }
 }
