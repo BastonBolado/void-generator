@@ -34,8 +34,5 @@ public class Main extends JavaPlugin {
         public Location getFixedSpawnLocation(World world, Random random) {
             return new Location(world, 0.0D, 64.0D, 0.0D);
         }
-
-
     }
-
 }
