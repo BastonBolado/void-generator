@@ -2,10 +2,13 @@ plugins {
     id 'java'
 }
 
-group 'org.example'
+group 'club.bastonbolabo'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = 1.8
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
 
 repositories {
     mavenCentral()
@@ -22,6 +25,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'org.spigotmc:spigot:1.15-R0.1-SNAPSHOT'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compileOnly 'org.spigotmc:spigot-api:1.15-R0.1-SNAPSHOT'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+}
+
+wrapper {
+    distributionType = Wrapper.DistributionType.ALL
 }
