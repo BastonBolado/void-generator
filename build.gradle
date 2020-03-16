@@ -25,3 +25,7 @@ dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.15-R0.1-SNAPSHOT'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+wrapper {
+    distributionType = Wrapper.DistributionType.ALL
+}
