@@ -1,6 +1,8 @@
 name: void-generator
-main: club.bastonbolado.voidgenerator.Main
-version: 1.0
+main: club.bastonbolado.voidgenerator.VoidGenerator
+version: 1.1
 author: BastonBolado
 website: https://bastonbolado.club
-api-version: 1.15
+api-version: '1.13'
+description: 'A world generator plugin which generates a ''void world'' consisting of empty chunks'
+load: STARTUP
